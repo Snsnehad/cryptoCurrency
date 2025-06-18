@@ -28,14 +28,14 @@ export default function HeroSection() {
                     </button>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-10 sm:gap-20 mt-6 max-md:hidden">
+                <div className="flex flex-col sm:flex-row gap-10 sm:gap-20 mt-36 max-md:hidden">
                     <div>
                         <p className="text-gray-400 text-sm">Or Continue With</p>
                         <div className="flex gap-4 mt-2">
-                            <div className="bg-gray-800 p-3 rounded">
+                            <div className="bg-transparent p-3 rounded-lg border-[#2b3139] border-2">
                                 <FaGoogle />
                             </div>
-                            <div className="bg-gray-800 p-3 rounded">
+                            <div className="bg-transparent p-3 rounded-lg border-[#2b3139] border-2">
                                 <FaApple />
                             </div>
                         </div>
@@ -43,7 +43,7 @@ export default function HeroSection() {
 
                     <div className="max-md:hidden">
                         <p className="text-gray-400 text-sm">Download App</p>
-                        <div className="bg-gray-800 inline-block p-3 rounded mt-2">
+                        <div className="bg-transparent inline-block p-3 rounded-lg border-[#2b3139] border-2  mt-2">
                             <FiGrid />
                         </div>
                     </div>

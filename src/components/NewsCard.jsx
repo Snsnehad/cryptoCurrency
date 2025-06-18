@@ -2,9 +2,10 @@
 
 export default function NewsCard() {
   const newsItems = [
-    "Federal Reserve Expected to Maintain Key Interest Rates Amid Economic Uncertainty",
-    "BNB Chain Sees Significant Increase in Daily Transactions...",
-    "Market Shows Moderate Buying Strength Amid MVRV Z..."
+    "SEC Delays Approval of Franklin XRP and Solana Spot ETFs",
+    "Bitcoin Price Movements Could Trigger Significant Liquidations",
+    "Bitcoin(BTC) Drops Below 104,000 USDT with a 3.41% Decrease in 24 Hours",
+    "U.S. Supreme Court to Hold Hearing on Trump's Global Tariff Policy"
   ];
 
   return (
@@ -15,7 +16,7 @@ export default function NewsCard() {
       </div>
       <ul className="text-sm space-y-3">
         {newsItems.map((news, idx) => (
-          <li key={idx} className="hover:underline cursor-pointer text-gray-300">{news}</li>
+          <li key={idx} className="hover:text-gray-400 cursor-pointer text-gray-300">{news}</li>
         ))}
       </ul>
     </div>

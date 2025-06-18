@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 
@@ -12,26 +12,28 @@ export default function LanguageCurrencyDropdown() {
   const filteredLangs = mockLanguages.filter(l =>
     l.toLowerCase().includes(langSearch.toLowerCase())
   );
-
   const filteredCurrencies = mockCurrencies.filter(c =>
     c.toLowerCase().includes(currSearch.toLowerCase())
   );
 
   return (
-    <div className="absolute top-full right-0 mt-2 bg-white text-black shadow-lg rounded-lg z-50 p-4 w-[420px]">
-      <div className="grid grid-cols-2 gap-4">
+    <div className="absolute top-full right-0 mt-2 bg-[#181A20] text-white rounded-md shadow-md w-[500px] p-4 z-50">
+      <div className="grid grid-cols-2 gap-6">
         <div className="flex flex-col">
-          <label className="text-sm font-semibold mb-2">Language</label>
+          <span className="text-sm font-medium mb-2 text-gray-400">Language</span>
           <input
             type="text"
-            placeholder="Search..."
+            placeholder="Search"
             value={langSearch}
             onChange={(e) => setLangSearch(e.target.value)}
-            className="px-2 py-1 border rounded text-sm mb-2"
+            className="bg-[#2A2D34] text-white text-sm rounded px-2 py-1 mb-2 placeholder-gray-400 focus:outline-none"
           />
-          <div className="max-h-48 overflow-y-auto custom-scroll">
+          <div className="max-h-48 overflow-y-auto pr-1 custom-scroll">
             {filteredLangs.map((lang, i) => (
-              <div key={i} className="py-1 px-2 text-sm hover:bg-gray-100 cursor-pointer rounded">
+              <div
+                key={i}
+                className="px-2 py-[6px] text-sm rounded cursor-pointer hover:text-yellow-400"
+              >
                 {lang}
               </div>
             ))}
@@ -39,17 +41,20 @@ export default function LanguageCurrencyDropdown() {
         </div>
 
         <div className="flex flex-col">
-          <label className="text-sm font-semibold mb-2">Currency</label>
+          <span className="text-sm font-medium mb-2 text-gray-400">Currency</span>
           <input
             type="text"
-            placeholder="Search..."
+            placeholder="Search"
             value={currSearch}
             onChange={(e) => setCurrSearch(e.target.value)}
-            className="px-2 py-1 border rounded text-sm mb-2"
+            className="bg-[#2A2D34] text-white text-sm rounded px-2 py-1 mb-2 placeholder-gray-400 focus:outline-none"
           />
-          <div className="max-h-48 overflow-y-auto custom-scroll">
+          <div className="max-h-48 overflow-y-auto pr-1 custom-scroll">
             {filteredCurrencies.map((curr, i) => (
-              <div key={i} className="py-1 px-2 text-sm hover:bg-gray-100 cursor-pointer rounded">
+              <div
+                key={i}
+                className="px-2 py-[6px] text-sm rounded cursor-pointer hover:text-yellow-400"
+              >
                 {curr}
               </div>
             ))}
